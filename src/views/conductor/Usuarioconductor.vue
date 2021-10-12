@@ -1,106 +1,91 @@
 <template>
+    <div style="background-color: antiquewhite; height: 2600px">
+        <v-toolbar id="menu-fixed">
+            <v-img
+                max-height="60"
+                max-width="60"
+                src="../../assets/logo1.png"
+            ></v-img>
 
+            <h2 style="color: rgba(4, 73, 112)"></h2>
 
-<div style="background-color:antiquewhite;  height: 2600px;">
- <v-toolbar id="menu-fixed"
-      
-      
-    >
-      <v-img
-  
-  max-height="60"
-  max-width="60"
-  src="../../assets/logo1.png"
-></v-img>
-  
-      
-  
-      <h2 style="color:rgba(4, 73, 112)"></h2>
-  
-      <v-spacer></v-spacer>
-  
-      <v-toolbar-items class="hidden-sm-and-down">
+            <v-spacer></v-spacer>
 
-        <v-btn text color="rgba(4, 73, 112)">
-          <a class="nav-link active" href="/Usuarioconductor">Lista de Verificación Preoperacional</a>
-        </v-btn>
-           
-        <v-btn text color="rgba(4, 73, 112)">
-          <a class="nav-link" href="/Conductorpreope">Mi Lista Preoperacional</a>
-        </v-btn>
-  
-        <v-btn text color="rgba(4, 73, 112)">
-          <a class="nav-link" href="/Home">Cerrar Sesion</a>
-        </v-btn>
-  
-       
-  
-       
-      </v-toolbar-items>
-  
-      
-    </v-toolbar>
-    <usuarioconductor></usuarioconductor>
+            <v-toolbar-items class="hidden-sm-and-down">
+                <v-btn text color="rgba(4, 73, 112)">
+                    <a class="nav-link active" href="/Usuarioconductor"
+                        >Lista de Verificación Preoperacional</a
+                    >
+                </v-btn>
 
-    <Footer></Footer>
-  
-</div>
+                <v-btn text color="rgba(4, 73, 112)">
+                    <a class="nav-link" href="/Conductorpreope"
+                        >Mi Lista Preoperacional</a
+                    >
+                </v-btn>
+
+                <v-btn text color="rgba(4, 73, 112)">
+                    <a class="nav-link" href="/Home">Cerrar Sesion</a>
+                </v-btn>
+            </v-toolbar-items>
+        </v-toolbar>
+        <v-app>
+            <usuarioconductor></usuarioconductor>
+        </v-app>
+
+        <Footer></Footer>
+    </div>
 </template>
 
 <script>
-
-import Usuarioconductor from '../../components/conductor/Usuarioconductor.vue'
-import Footer from '@/components/Footer.vue'
+import Usuarioconductor from "../../components/conductor/Usuarioconductor.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
-    components: {Usuarioconductor, Footer},
-   
-}  
+    components: { Usuarioconductor, Footer },
+};
 </script>
 
 
 <style scoped>
-
 #menu-fixed {
-	position:fixed;
-	z-index:1000;
-	top:0;
-	/*max-width:1000px;*/
-	left:0;
-	width:800%;
-  
-	box-shadow:0px 4px 3px rgb(4, 73, 112);
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    /*max-width:1000px;*/
+    left: 0;
+    width: 800%;
+
+    box-shadow: 0px 4px 3px rgb(4, 73, 112);
 }
 
-.nav-link{
-  color: #F25116  ;
-  padding-left: 0px;
-  padding-right: 0px;
+.nav-link {
+    color: #f25116;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
-.nav-link:hover{
- color: rgb(4, 73, 112);
+.nav-link:hover {
+    color: rgb(4, 73, 112);
 }
 
 a {
-  font: Arial;
-  font-style:inherit;
-  color:rgb(4, 73, 112)
+    font: Arial;
+    font-style: inherit;
+    color: rgb(4, 73, 112);
 }
 
-.active{
-  color: rgb(4, 73, 112);
+.active {
+    color: rgb(4, 73, 112);
 }
 
 .footer1 {
-   position: relative !important; 
-   bottom: 0;
-   
-   width: 1400px !important;
-   top:25px;
- 
-}
+    position: relative !important;
+    bottom: 0;
 
+    width: 1400px !important;
+    top: 25px;
+}
 </style>
 
 
