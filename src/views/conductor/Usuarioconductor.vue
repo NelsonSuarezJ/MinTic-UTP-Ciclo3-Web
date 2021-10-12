@@ -1,5 +1,5 @@
 <template>
-    <div style="background-color: antiquewhite; height: 2600px">
+    <div style="background-color: antiquewhite">
         <v-toolbar id="menu-fixed">
             <v-img
                 max-height="60"
@@ -14,23 +14,29 @@
             <v-toolbar-items class="hidden-sm-and-down">
                 <v-btn text color="rgba(4, 73, 112)">
                     <a class="nav-link active" href="/Usuarioconductor"
-                        >Lista de Verificación Preoperacional</a
+                        >Lista Preoperacional</a
                     >
                 </v-btn>
 
-                <v-btn text color="rgba(4, 73, 112)">
+                <!-- <v-btn text color="rgba(4, 73, 112)">
                     <a class="nav-link" href="/Conductorpreope"
                         >Mi Lista Preoperacional</a
                     >
-                </v-btn>
+                </v-btn> -->
 
                 <v-btn text color="rgba(4, 73, 112)">
                     <a class="nav-link" href="/Home">Cerrar Sesion</a>
                 </v-btn>
             </v-toolbar-items>
         </v-toolbar>
+        <br />
+        <br />
+        <br />
+
         <v-app>
-            <usuarioconductor></usuarioconductor>
+            <v-container>
+                <usuarioconductor></usuarioconductor>
+            </v-container>
         </v-app>
 
         <Footer></Footer>

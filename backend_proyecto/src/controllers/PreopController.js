@@ -46,10 +46,20 @@ class PreoperanalController {
             }
         }*/
 
+    // update(req, res) {
+    //     let { id, idDocumentoAdmin, nombre, apellido, email, telefono, clave, estado } = req.body;
+    //     let obj = { idDocumentoAdmin, nombre, apellido, email, telefono, clave, estado }
+    //     preoperacional.findByIdAndUpdate(id, { $set: obj }, (error, data) => {
+    //         if (error) {
+    //             res.status(500).send();
+    //         } else {
+    //             res.status(200).json(data);
+    //         }
+    //     })
+    // }
+
     update(req, res) {
-        let { id, idDocumentoAdmin, nombre, apellido, email, telefono, clave, estado } = req.body;
-        let obj = { idDocumentoAdmin, nombre, apellido, email, telefono, clave, estado }
-        preoperacional.findByIdAndUpdate(id, { $set: obj }, (error, data) => {
+        preoperacional.findByIdAndUpdate(req.params.id, req.body, (error, data) => {
             if (error) {
                 res.status(500).send();
             } else {
@@ -59,17 +69,18 @@ class PreoperanalController {
     }
 
 
+
     /*deleteUser(req, res) {
         let { id } = req.body;
         console.table({ id });
-
+    
         let tempUser = [];
         users.forEach(element => {
             if (id != element.id) {
                 tempUser.push(element);
             }
         });
-
+    
         users = tempUser;
         if (users != null) {
             res.status(200).json(users);
@@ -79,7 +90,8 @@ class PreoperanalController {
     }*/
 
     deletePreop(req, res) {
-        let { id } = req.body;
+        //let { id } = req.body;
+        let id = req.params.id
         preoperacional.findByIdAndDelete(id, (error, data) => {
             if (error) {
                 res.status(500).send();
@@ -98,7 +110,7 @@ class PreoperanalController {
                     userResp = element;
                 }
             });
-    
+     
             if (userResp != null) {
                 res.status(200).json(userResp);
             } else {

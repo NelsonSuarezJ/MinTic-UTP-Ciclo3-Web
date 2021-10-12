@@ -330,15 +330,16 @@ export default {
             this.editedItem = Object.assign({}, item);
             delete this.editedItem._id;
             this.dialog = true;
-            this.apiURL = `http://localhost:2000/api/update-pre/${item._id}`;
+            this.apiURL = `http://localhost:3000/preoperacional/${item._id}`;
         },
 
         deleteItem(item) {
             if (
                 window.confirm("¿Esta seguro que quiere eliminar el registro?")
             ) {
-                let apiURL = `http://localhost:2000/api/delete-pre/${item._id}`;
-
+                //let apiURL = `http://localhost:2000/api/delete-pre/${item._id}`;
+                //console.log(item);
+                let apiURL = `http://localhost:3000/preoperacional/${item._id}`;
                 axios
                     .delete(apiURL)
                     .then(() => {
@@ -386,7 +387,7 @@ export default {
                         console.log(error);
                     });
             } else {
-                let apiURL = "http://localhost:2000/api/preoperacional";
+                let apiURL = "http://localhost:3000/preoperacional";
                 axios
                     .post(apiURL, this.editedItem)
                     .then(() => {

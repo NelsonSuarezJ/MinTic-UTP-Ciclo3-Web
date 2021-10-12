@@ -12,8 +12,8 @@ class preoperacional {
         this.router.get("/preoperacional", objServerP.getAllPreop);
         this.router.get("/preoperacional/:id", objServerP.getPreop);
         this.router.post("/preoperacional", objServerP.crear);
-        this.router.put("/preoperacional", objServerP.update);
-        this.router.delete("/preoperacional", objServerP.deletePreop);
+        this.router.put("/preoperacional/:id", objServerP.update);
+        this.router.delete("/preoperacional/:id", objServerP.deletePreop);
     }
 }
 
